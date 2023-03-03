@@ -1,0 +1,244 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a href="#" class="header__link">
+                <img src="{{ url_for('static', filename='images/agrify_logo.svg') }}" alt="" class="logo">
+            </a>
+            <ul class="header__list">
+                <li class="header__item">
+                    <a href="" class="header__link">Возможности</a>
+                </li>
+                <li class="header__item">
+                    <a href="" class="header__link">Датчики</a>
+                </li>
+                <li class="header__item">
+                    <a href="" class="header__link">Новости</a>
+                </li>
+                <li class="header__item">
+                    <a href="" class="header__link">Контакты</a>
+                </li>
+            </ul>
+            <div class="header__buttons">
+                <a href="/auth/login" type="button" class="header__button">Войти</a>
+                <a href="/auth/register" type="button" class="header__button header__button--active">Зарегистрироваться</a>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="main-banner">
+    <div class="container">
+        <div class="main-banner__inner flex__row">
+            <div class="main-banner__text">
+                <div class="typography">
+                    <h1>Платформа цифрового сельского хозяйства </h1>
+                    <p>Следите за полями откуда угодно. Наблюдайте, как развиваются ваши посевы и находите
+                        проблемные точки, оставляйте заметки, следите за своей сельскохозяйственной техникой и
+                        контролируйте севооборот</p>
+                </div>
+                <div>
+                    <a href="https://app.agrify.uz/" target="_blank" class="main__section-btn">Попробовать</a>
+                </div>
+            </div>
+            <div class="main-banner__img">
+                <div class="main-banner-img">
+                    <img alt="Платформа цифрового сельского хозяйства" title="Платформа цифрового сельского хозяйства"
+                        src="{{ url_for('static', filename='images/main.png') }}" class="main-b">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="instruments">
+    <div class="instruments__item ">
+        <div class="container">
+            <div class="instruments__item-inner flex__row">
+                <div class="instruments__item-img">
+                    <div>
+                        <img src="{{ url_for('static', filename='images/fields.png') }}" alt="">
+                    </div>
+                </div>
+                <div class="instruments__item-about">
+                    <div class="typography">
+                        <h1>Наблюдайте за полями и техникой </h1>
+                        <p>Контролируйте состояние всходов, оставляйте заметки, следите за погодой и
+                            контролируйте свою технику в приложении Agrify. Вам нужен только доступ в интернет —
+                            дальше мы всё сделаем сами</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="advantages">
+        <div class="container">
+            <div class="advantages__inner">
+                <ul class="advantages__list">
+                    <li class="advantages__item">
+                        <div class="advantages__item-inner">
+                            <img src="{{ url_for('static', filename='images/fields.svg') }}" alt=""
+                                class="advantages__item-img">
+                            <div class="typography">
+                                <h5 class="advantages__item-title">
+                                    <a class="advantages__item-link" href="#">Поля</a>
+                                </h5>
+                                <p class="advantages__item-subtitle">
+                                    Выделите свои поля на карте — мы обработаем спутниковые снимки и покажем,
+                                    как развиваются посевы
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-inner">
+                            <img src="{{ url_for('static', filename='images/notes.svg') }}" alt=""
+                                class="advantages__item-img">
+                            <div class="typography">
+                                <h5 class="advantages__item-title">
+                                    <a class="advantages__item-link" href="#">Скаутинг и заметки</a>
+                                </h5>
+                                <p class="advantages__item-subtitle">
+                                    Следите за состоянием полей и оставляйте заметки даже в режиме оффлайн
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-inner">
+                            <img src="{{ url_for('static', filename='images/vehicles.svg') }}" alt=""
+                                class="advantages__item-img">
+                            <div class="typography">
+                                <h5 class="advantages__item-title">
+                                    <a class="advantages__item-link" href="#">Мониторинг техники и
+                                        сотрудников</a>
+                                </h5>
+                                <p class="advantages__item-subtitle">
+                                    Отслеживайте сельхозтехнику и сотрудников и получайте уведомления о
+                                    проблемах
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-inner">
+                            <img src="{{ url_for('static', filename='images/weather.svg') }}" alt=""
+                                class="advantages__item-img">
+                            <div class="typography">
+                                <h5 class="advantages__item-title">
+                                    <a class="advantages__item-link" href="#">Погода и метеодатчики</a>
+                                </h5>
+                                <p class="advantages__item-subtitle">
+                                    Получайте метеоданные с полей: прогноз погоды и расчет накопленных
+                                    показателей
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="instruments__item ">
+        <div class="container">
+            <div class="instruments__item-inner flex__row">
+                <div class="instruments__item-about">
+                    <div class="typography">
+                        <h1>Собирайте данные с полей и датчиков</h1>
+                        <p>Контролируйте прогноз погоды, состояние растений, местоположение сотрудников и объем
+                            топлива в технике прямо из офиса. При помощи Agrify это просто</p>
+                    </div>
+                    <div>
+                        <a href="https://app.agrify.uz/" target="_blank" class="instruments__item-btn">Попробовать</a>
+                    </div>
+                </div>
+                <div class="instruments__item-img">
+                    <div>
+                        <img alt="Платформа цифрового сельского хозяйства"
+                            title="Платформа цифрового сельского хозяйства"
+                            src="{{ url_for('static', filename='images/vehicles.png') }}" class="main-b">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="signin__block">
+    <div class="container">
+        <div class="signin__inner">
+            <div class="signin__typography">
+                <h1 class="signin__block--title">Попробуйте Agrify <br> прямо сейчас</h1>
+                <a href="#" class="signin__block--link">Войти</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__innner">
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <h3 class="footer__title">Возможности</h3>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Поля</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Скаутинг и заметки</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Мониторинг техники и сотрудников</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Погода</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Датчики</a>
+                </li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <h3 class="footer__title">Дополнительно</h3>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Новости</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Руководство пользователя</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Партнеры</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Политика конфиденциальности</a>
+                </li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <h3 class="footer__title">Компания</h3>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">О компании</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Работа у нас</a>
+                </li>
+                <li class="footer__item">
+                    <h3 class="footer__item--title">Почта</h3>
+                    <a href="#" class="footer__link">info@agrify.uz</a>
+                </li>
+                <li class="footer__item">
+                    <h3 class="footer__item--title">Телефон:</h3>
+                    <a href="#" class="footer__link">+998 (99) 177 88 55</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+{% endblock container %}
