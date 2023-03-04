@@ -1,0 +1,14 @@
+LICENCE
+MANIFEST.in
+README.MD
+setup.cfg
+setup.py
+Flask_OneID.egg-info/PKG-INFO
+Flask_OneID.egg-info/SOURCES.txt
+Flask_OneID.egg-info/dependency_links.txt
+Flask_OneID.egg-info/not-zip-safe
+Flask_OneID.egg-info/requires.txt
+Flask_OneID.egg-info/top_level.txt
+flask_oneid/__init__.py
+flask_oneid/exceptions.py
+flask_oneid/views.py
