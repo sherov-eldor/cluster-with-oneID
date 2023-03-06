@@ -16,6 +16,40 @@
 
 <body>
     <div class="body__inner">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a href="/" class="header__link">
+                        <img src="{{ url_for('static', filename='images/agrify_logo.svg') }}" alt="" class="logo">
+                    </a>
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="" class="header__link">Возможности</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="" class="header__link">Датчики</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="" class="header__link">Новости</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="" class="header__link">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="header__buttons">
+                        {% if current_user.is_authenticated %}
+                        <a href="/user/profile" type="button" class="header__button">Кабинет</a>
+                        <a href="/user/logout" type="button" class="header__button logout">Выход</a>
+                        {% else %}
+                        <a href="/auth/login" type="button" class="header__button">Войти</a>
+                        <a href="/auth/register" type="button"
+                            class="header__button header__button--active">Зарегистрироваться</a>
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        </header>
         {% block container %}
 
         {% endblock container %}

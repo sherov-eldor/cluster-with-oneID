@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+    <div class="user">
+        <div class="container">
+            <div class="user__header">
+                <div class="user__header--first">
+
+                </div>
+                <div class="user__header--second">
+                    <h3 class="user__name">
+                        {{current_user.full_name}}
+                    </h3>
+                </div>
+                <div class="user__imagebox">
+                    <img src="{{ url_for('static', filename='images/user_image.png') }}" alt="user image" class="user__img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock container %}
