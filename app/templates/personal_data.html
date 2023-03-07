@@ -1,0 +1,32 @@
+<div class="user">
+    <h3 class="user__title">Личный кабинет</h3>
+    <div class="user__inner">
+        <table class="table user__table">
+            <thead>
+                <tr>
+                    <th>Аватар</th>
+                    <th>E-mail</th>
+                    <th>Имя-фамилия</th>
+                </tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                <td class="user__imagebox">
+                    <img src="{{ url_for('static', filename='images/user_image.png') }}" alt="user image"
+                        class="user__img">
+                </td>
+                <td>
+                    {{current_user.email}}
+                </td>
+                <td>
+                    {{current_user.full_name}}
+                </td>
+            </tr>
+            </tbody>
+          </table>
+    </div>
+
+    
+
+</div>

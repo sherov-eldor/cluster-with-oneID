@@ -5,9 +5,23 @@
   font-family: "Rubik", sans-serif;
 }
 
+body { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 button {
   border: none;
   background: unset;
+}
+
+a{ 
+  text-decoration: none;
+}
+
+.hide {
+  display: none;
 }
 
 .container {
@@ -92,20 +106,13 @@ button {
   transition: 0.2s;
 }
 
-.logout {
-  background-color: #dc3545;
-  color: #fff;
-  border: none;
-}
+
 
 .header__button:hover {
   background-color: #4caf50;
   color: #fff;
 }
 
-.logout:hover {
-  background-color: #5c1018;
-}
 
 .header__button--active {
   background-color: #4caf50;
@@ -461,42 +468,123 @@ section {
   display: none;
 }
 
-.user {
-  margin-top: 100px;
+.profile__inner {
+  display: flex;
+  align-items: start;
+  gap: 50px;
 }
 
-.user__header--first {
-  background: linear-gradient(90deg, rgb(53, 154, 92) 24%, rgb(60, 161, 99) 53%, rgba(104, 157, 124, 1) 98%);
-  height: 100px;
-  width: 100%;
-  transform: rotate(180deg);
+.profile__btn {
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  left: 75px;
+  transition: .5s;
 }
 
-.user__header--second {
-  height: 100px;
-  width: 100%;
+.profile__bar {
+  width: 40px;
+  height: 40px;
+}
+
+.profile__nav {
+  width: 4%;
+  display: flex;
+  align-items: center;
+  background-color: #dcdcdc;
+  position: relative;
+  transition: .5s;
+}
+
+.profile__list {
+  /* height: 100vh; */
+  /* padding: 5px 10px; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: red;
+
+}
+
+.profile__item {
+  list-style-type: none;
+  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: .3s;
+  border-radius: 5px;
 }
 
-.user__header {
-  position: relative;
-  /* display: flex;
-  flex-direction: column-reverse; */
+.profile__item:hover {
+  background-color: #f1f3f5;
+}
+
+.profile__imagebox {
+  width: 2em;
+}
+
+.profile__logo {
+  width: 2em;
+  border-radius: 5px;
+}
+
+.longer__nav {
+  width: 20%;
+}
+
+.profile__databox {
+  width: 80%;
+  margin-left: 30px;
+}
+
+.profile__btn--changed {
+  left: 320px;
+}
+
+.user__inner {
+  margin-top: 50px;
+  
+}
+
+.user__table {
+  width: 100%;
+}
+
+.user__table {
+  border: none;
+}
+
+.user__table thead  {
+  /* padding: 5px 10px; */
+  border-top: 1px solid rgba(0,0,0,.12);
+  border-bottom: 1px solid rgba(0,0,0,.12);
+  margin-bottom: 10px;
+}
+
+.user__title {
+  margin-top: 20px;
+}
+
+.user__table tbody {
+  /* display: flex; */
+}
+
+.user__table th, td {
+  text-align: center;
 }
 
 .user__imagebox {
-  overflow: hidden;
-  width: 150px;
-  height: 150px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  position: absolute;
-  top: 25%;
-  left: 3%;
 }
 
 .user__img {
-  width: 150px;
-  height: 150px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
+
+
+

@@ -39,7 +39,7 @@
                     <div class="header__buttons">
                         {% if current_user.is_authenticated %}
                         <a href="/user/profile" type="button" class="header__button">Кабинет</a>
-                        <a href="/user/logout" type="button" class="header__button logout">Выход</a>
+                        <!-- <a href="/user/logout" type="button" class="header__button logout">Выход</a> -->
                         {% else %}
                         <a href="/auth/login" type="button" class="header__button">Войти</a>
                         <a href="/auth/register" type="button"
